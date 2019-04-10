@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/contacts_item_height"
+    android:id="@+id/contacts_item"
+    android:fitsSystemWindows="true">
+    <ImageView
+        android:id="@+id/contacts_header"
+        android:layout_width="@dimen/contacts_item_header_height"
+        android:layout_height="@dimen/contacts_item_header_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:src = "@drawable/default_header"/>
+    <ImageView
+        android:layout_width="@dimen/contacts_item_underline_width"
+        android:layout_height="1px"
+        android:background="#000"
+        app:layout_constraintLeft_toRightOf="@id/contacts_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="3dp"/>
+    <TextView
+        android:id="@+id/contacts_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/contacts_header"
+        app:layout_constraintTop_toTopOf="@id/contacts_header"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:text="@string/default_contacts_name"/>
+</android.support.constraint.ConstraintLayout>
